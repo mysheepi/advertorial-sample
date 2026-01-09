@@ -1,305 +1,494 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orthopäde enthüllt: Warum so viele Nackenschmerzen nachts entstehen</title>
+    <title>Orthopäde enthüllt: Warum so viele Nackenschmerzen nachts entstehen und was WIRKLICH hilft</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#7A8B30',
-                        'primary-dark': '#5e6d23',
-                        dark: '#1a1a1a',
-                        light: '#f3f4f6',
+                        'mysheepi-green': '#7a932b',
+                        'mysheepi-green-dark': '#5e6d23',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
+                        'sans': ['Open Sans', 'system-ui', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
-
-        .font-serif {
-            font-family: 'Merriweather', serif;
+        .sticky-sidebar {
+            position: sticky;
+            top: 20px;
+            align-self: start;
         }
-
-        /* Custom checkbox style for list items */
-        .check-list li {
-            position: relative;
-            padding-left: 1.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .check-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #7A8B30;
-            font-weight: bold;
+        @media (max-width: 1024px) {
+            .sticky-sidebar {
+                position: relative;
+                top: 0;
+            }
         }
     </style>
 </head>
+<body class="bg-white text-gray-900 antialiased">
 
-<body class="bg-white text-gray-900 leading-relaxed antialiased">
-
-    <!-- Top Advertisement Label -->
-    <div class="bg-gray-100 text-gray-500 text-xs text-right py-1 px-4 uppercase tracking-widest">
-        Anzeige
-    </div>
-
-    <!-- Main Header -->
-    <header class="bg-primary text-white py-4 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="w-32">
-                <!-- Logo Placeholde/Image -->
-                <img src="images/Frame 170.png" alt="mySheepi" class="h-10 brightness-0 invert">
+    <!-- Top Green Bar -->
+    <div class="bg-mysheepi-green text-white py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
+            <div class="flex items-center gap-2">
+                <img src="images/mysheepi-logo.png" alt="mySheepi" class="h-6 brightness-0 invert">
+                <span>mysheepi.com</span>
             </div>
-            <div class="hidden sm:flex items-center space-x-2 text-sm font-medium">
-                <div class="flex text-yellow-400">
-                    ★★★★★
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="text-yellow-300">★★★★★</span>
+                    <span>4.7</span>
                 </div>
-                <span>4.7 | 10.025 Bewertungen</span>
+                <span>10.025 Bewertungen</span>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="bg-gray-50 border-b border-gray-200 py-2">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600">
             Home > Empfehlung eines Orthopäden / Mediziners
         </div>
     </div>
 
     <!-- Main Layout -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-            <!-- Main Article Column -->
-            <article class="lg:col-span-8">
-                <header class="mb-8">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                        Orthopäde enthüllt: Warum so viele Nackenschmerzen nachts entstehen und was WIRKLICH hilft
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Main Content -->
+            <main class="lg:col-span-8 space-y-8">
+                
+                <!-- Hero Title -->
+                <header class="space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="text-mysheepi-green">Orthopäde enthüllt: </span>
+                        <span>Warum so viele </span>
+                        <span class="font-bold">Nackenschmerzen</span>
+                        <span> nachts entstehen und was </span>
+                        <span class="font-bold">WIRKLICH</span>
+                        <span> hilft</span>
                     </h1>
-
-                    <div class="flex items-center space-x-4 border-b border-gray-100 pb-6">
-                        <img src="images/IMG_4350 1.png" alt="Dipl-Med. Michael Hartmann"
-                            class="w-16 h-16 rounded-full object-cover border-2 border-primary">
+                    
+                    <!-- Author Bio -->
+                    <div class="flex items-start gap-4 py-6 border-b border-gray-200">
+                        <img src="images/ChatGPT Image 5 mei 2025, 13_04_00 2.png" alt="Dr. Michael Hartmann" class="w-24 h-24 rounded-full object-cover border-2 border-mysheepi-green">
                         <div>
-                            <p class="font-bold text-gray-800">Dipl-Med. Michael Hartmann</p>
-                            <p class="text-sm text-gray-600">Facharzt für Orthopädie mit 18 Jahren Praxiserfahrung</p>
+                            <p class="font-bold text-lg">Ein Orthopäde klärt auf</p>
+                            <p class="text-gray-600">von Dr. Michael Hartmann, Facharzt für Orthopädie mit 18 Jahren Praxiserfahrung</p>
                         </div>
                     </div>
                 </header>
 
-                <figure class="mb-10">
-                    <img src="images/Gen-3 Alpha Turbo 1829839293, Gen4 45+ german man , M 5 1.png"
-                        alt="Mann mit Nackenschmerzen" class="w-full rounded-xl shadow-lg">
-                    <figcaption class="text-sm text-gray-500 mt-2 italic">Chronische Nackenschmerzen beginnen oft in der
-                        Nacht.</figcaption>
+                <!-- Intro Image -->
+                <figure class="my-8">
+                    <img src="images/Gen-3 Alpha Turbo 848895389, Cropped - ChatGPT Im, M 5 1.png" alt="Nackenschmerzen" class="w-full rounded-lg shadow-lg">
                 </figure>
 
-                <div class="prose prose-lg prose-gray max-w-none">
-                    <p class="font-bold text-xl text-gray-800">Jeden Tag dieselben Schmerzen. Jeden Tag dieselben
-                        Fragen.</p>
-                    <p>Stehen Sie morgens auf und fühlen sich, als hätten Sie die ganze Nacht kein Auge zugetan? Der
-                        Nacken ist steif, die Schultern verspannt, und der Kopf pocht bereits vor dem ersten Kaffee.</p>
+                <!-- First Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Jeden Tag dieselben Schmerzen. Jeden Tag dieselben Fragen.
+                    </h2>
+                    <p class="text-lg mb-4">Es beginnt oft mit einem scheinbar harmlosen Satz:</p>
+                    <p class="text-lg mb-4">
+                        „<strong>Ich weiß nicht, woran es liegt – aber ich wache einfach nicht mehr erholt auf.</strong>"
+                    </p>
+                    <p class="text-lg mb-4">Ich bin Orthopäde. Ich arbeite seit fast zwei Jahrzehnten mit Menschen, die unter Schmerzen leiden – Nacken, Schultern, Rücken. Immer wieder höre ich dieselben Beschwerden. Immer wieder sehe ich dieselben Muster.</p>
+                    <p class="text-lg mb-4">
+                        Doch was mich immer wieder aufs Neue berührt: <strong>Die stille Verzweiflung, mit der viele Patientinnen und Patienten kommen</strong>. Sie schlafen schlecht, sind müde, gereizt. Und sie wissen oft nicht mehr, was sie tun sollen. Dabei sind Müdigkeit, Reizzustände und schreckliche Nächte erst der Anfang, wenn sich jetzt nichts ändert.
+                    </p>
+                    <p class="text-lg mb-4">Wenn ich sie frage, was sie schon alles ausprobiert haben, kommen immer wieder die gleichen Ansätze</p>
+                    <p class="text-lg mb-4">"Ich habe Physiotherapie, Massagen, Schmerzmittel, Chiropraktiker Besuche, Wärmekissen, und dutzende Matratzen ausprobiert. Und nichts hilft!"</p>
+                    <p class="text-lg mb-4">„Ich kann nachts nicht mehr durchschlafen – und morgens fühle ich mich wie gerädert."</p>
+                    <p class="text-lg mb-4">
+                        Manche leiden seit Monaten. Andere seit Jahren. Die meisten von ihnen haben längst aufgegeben, <strong>an eine echte Lösung zu glauben</strong>.
+                    </p>
+                    <p class="text-lg">Es ist eine Szene, die ich in meiner Praxis immer wieder erlebe.</p>
+                </section>
 
-                    <p>Wenn Ihnen das bekannt vorkommt, sind Sie nicht allein. Millionen von Menschen leiden unter
-                        chronischen Nackenproblemen, die sie einfach nicht loswerden – egal wie viele neue Matratzen
-                        oder Kissen sie ausprobieren.</p>
+                <!-- Image Section -->
+                <figure class="my-12">
+                    <img src="images/ChatGPT Image 5 mei 2025, 13_04_00 2.png" alt="Schlafprobleme" class="w-full rounded-lg shadow-lg">
+                </figure>
 
-                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Das Problem: Statische Kissen passen nicht
-                        zu dynamischen Schläfern</h2>
-                    <p>Viele herkömmliche Kissen zwingen den Hals in eine unnatürliche Position. Entweder ist das Kissen
-                        zu hoch und der Kopf knickt ab, oder es ist zu flach und die Wirbelsäule hängt durch.</p>
+                <!-- Second Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Und dann stelle ich ihnen eine einzige Frage …
+                    </h2>
+                    <p class="text-lg mb-4">Nicht: „Wo tut es genau weh?"</p>
+                    <p class="text-lg mb-4">Nicht: „Wie sitzen Sie am Schreibtisch?"</p>
+                    <p class="text-lg mb-4">Sondern:</p>
+                    <p class="text-xl font-bold mb-4">„Wie sieht Ihr Kissen aus – und wie alt ist es?"</p>
+                    <p class="text-lg mb-4">In fast 80 % der Fälle ist die Antwort dieselbe:</p>
+                    <ul class="text-lg space-y-2 mb-4">
+                        <li>👉 Ein Standardkissen aus dem Möbelhaus.</li>
+                        <li>👉 Oder ein vermeintlich orthopädisches Nackenkissen, das sich in der Praxis als unflexibel oder zu hart herausstellt.</li>
+                        <li>👉 Oder ein Kissen, das „eigentlich ganz bequem" ist – aber keinerlei gezielte Unterstützung im sensiblen Halswirbelbereich bietet.</li>
+                        <li>👉 Häufig wissen Patienten es nicht mal genau und haben sich über ihre Kissenwahl noch nie so richtig Gedanken gemacht.</li>
+                    </ul>
+                    <p class="text-lg">
+                        <strong>Und genau da liegt das Problem.</strong>
+                    </p>
+                </section>
 
-                    <div class="my-8">
-                        <img src="images/ChatGPT Image 2 mei 2025, 09_07_59 1.png" alt="Falsche Liegeposition"
-                            class="rounded-lg shadow-md w-full">
-                    </div>
-
-                    <p>"Die meisten Patienten kommen zu mir und denken, ihr Nacken sei das Problem," erklärt Dipl-Med.
-                        Hartmann. "Aber in 90% der Fälle ist es die fehlende Unterstützung in der Nacht. Der Körper
-                        kämpft 8 Stunden lang gegen die Schwerkraft, anstatt sich zu erholen."</p>
-
-                    <div class="bg-green-50 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-                        <h3 class="text-xl font-bold text-primary mb-2">Die Lösung: Anatomische Anpassbarkeit</h3>
-                        <p class="mb-0">Ja. Genau deswegen. Der Körper braucht nachts nur eines: Eine anatomisch
-                            korrekte, entlastende Liegeposition. Das mySheepi Kissen wurde entwickelt, um genau diese
-                            Lücke zu schließen.</p>
-                    </div>
-
-                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Warum mySheepi anders ist</h2>
-                    <p>Im Gegensatz zu festen Schaumstoffblöcken oder einfachen Federkissen bietet mySheepi ein
-                        verstellbares Mehrkammer-System. Sie können die Füllmenge individuell anpassen und die
-                        Nackenrolle separat justieren.</p>
-
-                    <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <img src="images/ChatGPT Image 2 mei 2025, 09_16_25 1.png" alt="mySheepi Aufbau"
-                            class="rounded-lg shadow-md w-full">
-                        <img src="images/ChatGPT Image 2 mei 2025, 09_24_09 1.png" alt="Anpassung"
-                            class="rounded-lg shadow-md w-full">
-                    </div>
-
-                    <p>Dies sorgt dafür, dass die Halswirbelsäule in jeder Schlafposition – ob Rücken, Seite oder Bauch
-                        – optimal gestützt wird.</p>
-
-                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Das Fazit des Experten</h3>
-                    <p>Mach Schluss mit unruhigen Nächten und quälenden Verspannungen. Erlebe selbst den Unterschied mit
-                        dem innovativen Kissen Konzept.</p>
+                <!-- Image Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-12">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_07_59 1.png" alt="Schlafposition 1" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_10_42 1.png" alt="Schlafposition 2" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_16_25 1.png" alt="Schlafposition 3" class="w-full rounded-lg shadow-md">
                 </div>
 
-                <!-- Testimonials Preview -->
-                <div class="mt-12 pt-10 border-t border-gray-200">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Was begeisterte Nutzer sagen</h3>
+                <!-- Third Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Die Nacht entscheidet über den Tag
+                    </h2>
+                    <p class="text-lg mb-4">Die meisten Menschen denken, wenn sie halbwegs durchschlafen, dann ist ihr Schlaf erholsam.</p>
+                    <p class="text-lg mb-4">Aber aus medizinischer Sicht ist Schlaf viel mehr: Er ist der wichtigste Regenerationsprozess des Körpers. Gerade für die Halswirbelsäule – eine der empfindlichsten Regionen unseres Bewegungsapparates.</p>
+                    <ul class="text-lg space-y-3 mb-4 list-disc pl-6">
+                        <li><strong>Die Nackenmuskulatur bleibt aktiv, statt sich zu entspannen.</strong></li>
+                        <li><strong>Die empfindliche Atlasregion wird überdehnt oder abgeknickt.</strong></li>
+                        <li><strong>Die Blutzirkulation wird eingeschränkt.</strong></li>
+                        <li><strong>Kleine Verspannungen verstärken sich Nacht für Nacht – bis irgendwann chronische Beschwerden entstehen.</strong></li>
+                    </ul>
+                    <p class="text-lg mb-4">Die Betroffenen wachen nicht nur mit Schmerzen auf.</p>
+                    <p class="text-lg font-bold">Sie wachen in einem Teufelskreis auf.</p>
+                </section>
+
+                <!-- Image Pair -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_24_09 1.png" alt="Schlafposition" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_29_24 1.png" alt="Schlafposition" class="w-full rounded-lg shadow-md">
+                </div>
+
+                <!-- Fourth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Die Folgen: Müdigkeit, Gereiztheit, ein Körper, der nicht mehr will
+                    </h2>
+                    <p class="text-lg mb-4">Wenn der Körper nachts nicht richtig regenerieren kann, beginnt eine stille Spirale:</p>
+                    <ul class="text-lg space-y-2 mb-4">
+                        <li>🌀 Die Nacken- und Schultermuskulatur bleibt dauerhaft angespannt – statt sich im Schlaf zu erholen.</li>
+                        <li>🌀 Die Wirbelsäule ist nicht richtig ausgerichtet und wird nicht stabilisiert.</li>
+                        <li>🌀 Die Folge: Immer mehr Menschen wachen mit stechenden Nackenschmerzen, Druck im oberen Rücken oder einem „blockierten Gefühl" im Schulterbereich auf.</li>
+                        <li>🌀 Gleichzeitig nimmt die Schlafqualität ab – man wird häufiger wach, wälzt sich hin und her, kann nicht mehr durchschlafen.</li>
+                        <li>🌀 Am nächsten Tag fehlt die Energie. Man fühlt sich verspannt, gereizt, müde.</li>
+                        <li>🌀 Der Stress steigt und damit die körperliche Anspannung. Das schwächt auch das Immunsystem und kann zu häufigem Krankwerden führen.</li>
+                    </ul>
+                    <p class="text-lg mb-4">Ein unaufhaltsamer Kreislauf, der von Woche zu Woche schlimmer wird.</p>
+                    <p class="text-lg mb-4">Viele meiner Patientinnen und Patienten sind an diesem Punkt emotional erschöpft.</p>
+                    <p class="text-lg mb-4">Manche beginnen an sich selbst zu zweifeln – und wissen nicht mehr, wo sie anfangen sollen.</p>
+                    <p class="text-lg">Und das alles – wegen eines Kissens? Ja. Genau deswegen.</p>
+                </section>
+
+                <!-- Image Grid 4 -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-12">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_32_42 1.png" alt="Kissen" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_32_42 2.png" alt="Kissen" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_32_42 3.png" alt="Kissen" class="w-full rounded-lg shadow-md">
+                    <img src="images/ChatGPT Image 2 mei 2025, 09_32_42 4.png" alt="Kissen" class="w-full rounded-lg shadow-md">
+                </div>
+
+                <!-- Fifth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Ja. Genau deswegen.
+                    </h2>
+                    <p class="text-lg mb-4">Der Körper braucht nachts nur eines:</p>
+                    <p class="text-xl font-semibold mb-4">Eine anatomisch korrekte, entlastende Liegeposition.</p>
+                    <p class="text-lg mb-4">Nur dann kann die sensible Halswirbelsäule loslassen. Nur dann können Muskeln entspannen. Nur dann beginnt echte Regeneration.</p>
+                    <p class="text-lg">Und genau das leisten die wenigsten Kissen.</p>
+                </section>
+
+                <!-- Product Showcase Images -->
+                <div class="my-12 space-y-8">
+                    <figure class="relative">
+                        <img src="images/image 2.png" alt="Richtige Haltung" class="w-full rounded-lg shadow-lg">
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-lg shadow-lg">
+                            <p class="text-xl font-semibold text-center text-mysheepi-green-dark">Das richtige Kissen unterstützt eine aufrechte Haltung</p>
+                        </div>
+                    </figure>
+                    <figure class="relative">
+                        <img src="images/Gen-3 Alpha Turbo 1829839293, Gen4 45+ german man , M 5 1.png" alt="Schmerzen" class="w-full rounded-lg shadow-lg">
+                        <div class="absolute bottom-8 left-8 bg-white px-6 py-3 rounded-lg shadow-lg">
+                            <p class="text-xl font-semibold text-center text-mysheepi-green-dark">Stechende Schmerzen können den Alltag beeinträchtigen</p>
+                        </div>
+                    </figure>
+                </div>
+
+                <!-- Sixth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Die Lösung, die ich zuerst für zu simpel hielt – und jetzt jedem empfehle
+                    </h2>
+                    <p class="text-lg mb-4">Ich bin als Arzt grundsätzlich zurückhaltend mit Produktempfehlungen.</p>
+                    <p class="text-lg mb-4">Doch vor etwa zwei Jahren stieß ich auf ein Kissen, das anders war.</p>
+                    <p class="text-lg mb-4">
+                        Der Name: <strong class="font-semibold">mySheepi HOME.</strong>
+                    </p>
+                    <p class="text-lg mb-4">Ein Kissen mit einer integrierten, beweglichen Nackenrolle. Ein System aus mehreren Kammern, das sich an die Anatomie jedes Körpers anpassen lässt.</p>
+                    <p class="text-lg mb-4">Ich dachte: Das klingt gut, aber funktioniert es auch wirklich?</p>
+                    <p class="text-lg mb-4">Ich habe es selbst getestet. Und ich war erstaunt.</p>
+                    <p class="text-lg mb-4">Ein Kissen einer deutschen Marke mit einem Konzept, das in Zusammenarbeit mit Schlafexperten entwickelt wurde – und das ich heute selbst benutze.</p>
+                    <p class="text-lg mb-4">
+                        Warum? Weil es als einziges Kissen genau dort ansetzt, wo andere versagen: an <strong class="font-semibold">der Unterstützung der sensiblen Atlasregion.</strong>
+                    </p>
+                    <p class="text-lg">Seitdem empfehle ich es fast jedem, der mit nackenbedingten Beschwerden zu mir kommt.</p>
+                </section>
+
+                <!-- Product Image -->
+                <figure class="my-12 relative">
+                    <img src="images/IMG_4187 1.png" alt="mySheepi HOME" class="w-full rounded-lg shadow-lg">
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                        <p class="text-3xl font-bold text-white text-center">mySheepi HOME</p>
+                    </div>
+                </figure>
+
+                <!-- Seventh Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Was dieses Wunderkissen so besonders macht:
+                    </h2>
+                    <p class="text-lg mb-4">Was mich am mySheepi HOME überzeugt hat, ist vor allem, wie durchdacht jedes Detail ist.</p>
+                    <p class="text-lg mb-4">Die integrierte Nackenrolle gibt dem sensiblen Halsbereich genau dort Halt, wo herkömmliche Kissen oft versagen.</p>
+                    <p class="text-lg mb-4">
+                        Durch <strong>zwei getrennte Kammern</strong> lässt sich das Kissen individuell befüllen. Je nachdem, wie hoch oder weich man es braucht.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Ob Rücken-, Seiten- oder Bauchlage, es passt sich <strong>jeder Schlafposition</strong> an, ohne starr zu wirken.
+                    </p>
+                    <p class="text-lg">Inzwischen empfehlen viele Kolleginnen und Kollegen das Kissen weiter, weil die Rückmeldungen ihrer Patientinnen und Patienten so eindeutig sind.</p>
+                </section>
+
+                <!-- Video/GIF Section -->
+                <figure class="my-12">
+                    <img src="images/Screen Recording 2025-05-05 at 13.49.00 1.png" alt="mySheepi Demo" class="w-full rounded-lg shadow-lg">
+                </figure>
+
+                <!-- Eighth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        „Ich war skeptisch – aber es war das erste Kissen, das wirklich geholfen hat."
+                    </h2>
+                    <p class="text-lg mb-4">Diese Rückmeldung bekomme ich von Patienten regelmäßig.</p>
+                    <p class="text-lg mb-4">Und ganz ehrlich? Ich verstehe sie gut.</p>
+                    <p class="text-lg mb-4">Denn viele meiner Patienten hatten den Glauben an das eine richtige Kissen längst aufgegeben.</p>
+                    <p class="text-lg mb-4">Sie haben schon alles probiert. Von teuren Memory-Foam-Kissen über ergonomisch geformte Varianten bis hin zu sogenannten „orthopädischen" Kissen aus dem Internet.</p>
+                    <p class="text-lg font-bold mb-4">Nichts davon hat wirklich geholfen.</p>
+                    <p class="text-lg mb-4">Und dann – plötzlich – schreiben sie mir Wochen später:</p>
+                    <p class="text-lg font-bold mb-4">„Ich hätte nie gedacht, dass ein Kissen mein Leben verändern kann."</p>
+                    <p class="text-lg font-bold mb-4">„Ich schlafe zum ersten Mal seit Jahren wieder durch."</p>
+                    <p class="text-lg font-bold mb-4">„Ich wache morgens ohne Schmerzen auf. Das war für mich fast nicht mehr vorstellbar."</p>
+                    <p class="text-lg mb-4">Es geht dabei nicht nur um Nacken oder Rücken.</p>
+                    <p class="text-lg mb-4">Es geht um Motivation. Um Lebensenergie. Um das Gefühl, morgens aufzuwachen und wieder man selbst zu sein.</p>
+                    <p class="text-lg mb-4">
+                        Viele berichten, dass sie tagsüber leistungsfähiger, besser gelaunt und endlich wieder ausgeglichen sind – <strong class="font-semibold">einfach, weil sie nachts gut schlafen.</strong>
+                    </p>
+                    <p class="text-lg">
+                        Und genau deshalb sieht man auch in den fantastischen Kundenbewertungen von mySheepi. Die Firma wird bei Trustpilot, Google und Trustpilot mit unglaublichen <strong class="font-semibold">4.7 von 5 Sternen</strong> bewertet. Und das bei über 10.000 Kundenbewertungen.
+                    </p>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="bg-gray-100 py-12 px-6 rounded-xl my-12">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                            <div class="flex text-yellow-500 mb-2">★★★★★</div>
-                            <p class="text-gray-700 italic mb-4">"Ich hab es auch mit der extra weichen Füllung, und es
-                                ist klasse. Meine Nacken und Schulterschmerzen sind spürbar besser geworden."</p>
-                            <p class="font-bold text-sm text-gray-900">- Lena</p>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="images/stars.png" alt="Stars" class="h-5">
+                                <span class="font-bold">Trustpilot</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 italic">"Ich habe schon sehr viele Kopfkissen ausprobiert und mysheepi ist mein Favorit! Habe gleich noch die Bettwäsche und ein zweites Kissen für meine Dienstreisen bestellt!"</p>
+                            <p class="font-semibold">- Steffen</p>
                         </div>
-                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                            <div class="flex text-yellow-500 mb-2">★★★★★</div>
-                            <p class="text-gray-700 italic mb-4">"Dies ist mit großem Abstand das beste Kissen, dass ich
-                                je hatte. Ich wache viel seltener nachts auf."</p>
-                            <p class="font-bold text-sm text-gray-900">- Monika</p>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="images/stars.png" alt="Stars" class="h-5">
+                                <span class="font-bold">Trustpilot</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 italic">"Top Kissen. Ich bin seit Monaten total Begeistert! Mir kommt kein anderes Kissen zum Schlafen unter den Kopf. I love it."</p>
+                            <p class="font-semibold">- Ulrich</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="images/stars.png" alt="Stars" class="h-5">
+                                <span class="font-bold">Trustpilot</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 italic">"Ich habe bestimmt 15 verschiedene Nackenkissen zu Hause und war mit keinem zufrieden. My Sheepi ist das erste , das für mich bequem ist und mich schlafen lässt !! Ich bin echt begeistert!"</p>
+                            <p class="font-semibold">- Christiane</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src="images/stars.png" alt="Stars" class="h-5">
+                                <span class="font-bold">Trustpilot</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 italic">"MySheepi ist das beste Kopfkissen, welches ich bis jetzt gefunden habe. Morgens wache ich ohne Verspannungen im Nackenbereich auf."</p>
+                            <p class="font-semibold">- Elke</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ninth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Du brauchst keine zehn Produkte. Du brauchst die richtige Unterstützung.
+                    </h2>
+                    <p class="text-lg mb-4">Wenn Du morgens mit Schmerzen aufwachst …</p>
+                    <p class="text-lg mb-4">Wenn Du Dich nicht mehr ausgeruht fühlst …</p>
+                    <p class="text-lg mb-4">Wenn Du das Gefühl hast, dass Dir der Schlaf mehr nimmt als gibt …</p>
+                    <p class="text-lg mb-4">Dann möchte ich Dir denselben Rat geben, den ich auch meinen Patienten gebe:</p>
+                    <p class="text-lg font-bold mb-4">Gib Deinem Körper die Chance, wieder zur Ruhe zu kommen und probiere das mySheepi HOME.</p>
+                    <p class="text-lg mb-4">Ja, das mySheepi Kissen ist nicht günstig.</p>
+                    <p class="text-lg mb-4">Aber es ist auch kein weiteres „Kissen, das Du wieder zurückschickst".</p>
+                    <p class="text-lg mb-4">Es ist eine Investition in Deine Gesundheit und in ein besseres Leben.</p>
+                    <p class="text-lg mb-4">Es ist eine durchdachte Lösung – entwickelt mit dem Ziel, Dir wirklich zu helfen.</p>
+                    <p class="text-lg mb-4">Viele meiner Patienten sagen heute:</p>
+                    <p class="text-lg font-bold mb-4">„Ich habe mehr Geld für Massagen, Schmerzmittel und andere Kissen ausgegeben – und keines davon hat langfristig geholfen."</p>
+                    <p class="text-lg">Einmal in ein wirklich gutes Kissen investieren, statt ständig erfolglos die Symptome zu bekämpfen.</p>
+                </section>
+
+                <!-- Product Showcase -->
+                <figure class="my-12 relative">
+                    <img src="images/IMG_4350 1.png" alt="mySheepi Produkt" class="w-full rounded-lg shadow-lg">
+                </figure>
+
+                <!-- Tenth Section -->
+                <section class="prose prose-lg max-w-none">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-mysheepi-green mb-6">
+                        Du hast nichts zu verlieren – außer Schmerzen.
+                    </h2>
+                    <p class="text-lg mb-4">Aber umso mehr zu gewinnen:</p>
+                    <ul class="text-lg space-y-2 mb-4">
+                        <li>✅ Erholten Schlaf</li>
+                        <li>✅ Weniger Verspannungen</li>
+                        <li>✅ Mehr Energie, mehr Lebensfreude – jeden Morgen</li>
+                    </ul>
+                    <p class="text-lg mb-4">
+                        Teste das mySheepi HOME <strong>100 Nächte lang risikofrei.</strong>
+                    </p>
+                    <p class="text-lg">Wenn es Dir nicht hilft, schickst Du es zurück. Aber vielleicht, ganz vielleicht, ist es das letzte Kissen, das Du je brauchst.</p>
+                </section>
+
+                <!-- Final CTA Product Card -->
+                <div class="bg-white border-4 border-mysheepi-green rounded-2xl p-8 my-12">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-shrink-0">
+                            <img src="images/HOME pillow 60x40_front beige bg 1.png" alt="mySheepi HOME" class="w-64 h-64 object-contain rounded-xl">
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-3xl font-bold text-mysheepi-green mb-4">mySheepi HOME Kopfkissen</h3>
+                            <p class="text-lg text-gray-700 mb-4">Mach Schluss mit unruhigen Nächten und quälenden Verspannungen. Erlebe selbst den Unterschied mit dem innovativen Kissen Konzept.</p>
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-2xl font-bold">4,7</span>
+                                <img src="images/stars.png" alt="Stars" class="h-6">
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 variant-selector-group">
+                                <button class="variant-btn px-4 py-2 border-2 border-mysheepi-green bg-mysheepi-green text-white rounded-lg text-sm font-semibold transition-all hover:bg-mysheepi-green-dark" data-variant-id="45312544440584" data-price="135" data-old-price="159">
+                                    Kompakt (60x40 cm)
+                                </button>
+                                <button class="variant-btn px-4 py-2 border-2 border-gray-300 bg-white text-gray-700 rounded-lg text-sm font-semibold transition-all hover:border-mysheepi-green" data-variant-id="45312544473352" data-price="152" data-old-price="179">
+                                    Standard (80x40 cm)
+                                </button>
+                            </div>
+                            <a href="https://www.mysheepi.com/cart/45312544440584:1" class="cta-link inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors">
+                                Jetzt zum Angebot
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bottom CTA Section -->
-                <div class="mt-16 bg-gray-900 text-white rounded-2xl shadow-2xl overflow-hidden">
-                    <div class="p-8 md:p-12 text-center">
-                        <h3 class="text-3xl font-bold mb-4">mySheepi HOME Kopfkissen</h3>
-                        <p class="text-gray-300 mb-8 max-w-lg mx-auto">Starten Sie noch heute Ihre Reise zu
-                            schmerzfreiem Schlaf. 100 Nächte risikofrei probeschlafen.</p>
+            </main>
 
-                        <!-- Variant Selection for Bottom CTA -->
-                        <div
-                            class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8 variant-selector-group">
-                            <button
-                                class="variant-btn w-full md:w-auto px-6 py-4 rounded-lg border-2 border-white bg-white text-primary font-bold transition-all transform hover:scale-105"
-                                data-variant-id="45312544440584" data-price="135" data-old-price="159">
-                                <div class="text-lg">Kompakt</div>
-                                <div class="text-sm font-normal text-gray-600">60x40 cm</div>
-                                <div class="mt-1">135€</div>
-                            </button>
-                            <button
-                                class="variant-btn w-full md:w-auto px-6 py-4 rounded-lg border-2 border-gray-600 bg-gray-800 text-white font-bold transition-all transform hover:border-white"
-                                data-variant-id="45312544473352" data-price="152" data-old-price="179">
-                                <div class="text-lg">Standard</div>
-                                <div class="text-sm font-normal text-gray-400">80x40 cm</div>
-                                <div class="mt-1">152€</div>
-                            </button>
-                        </div>
-
-                        <a href="https://www.mysheepi.com/cart/45312544440584:1"
-                            class="cta-link inline-block bg-primary hover:bg-primary-dark text-white text-xl font-bold py-4 px-12 rounded-lg shadow-lg transition-colors duration-300">
-                            JETZT ZUM ANGEBOT
-                        </a>
-                        <p class="mt-4 text-xs text-gray-400 flex justify-center items-center gap-2">
-                            <span>🔒 Sicherer SSL-Checkout</span>
-                            <span>•</span>
-                            <span>🚚 Kostenloser Versand</span>
-                        </p>
-                    </div>
-                </div>
-
-            </article>
-
-            <!-- Sidebar (Sticky) -->
-            <aside class="lg:col-span-4 space-y-8">
-                <div class="sticky top-4">
-                    <!-- Product Card -->
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky-sidebar">
                     <div class="bg-white border border-gray-200 rounded-xl shadow-lg p-6">
                         <div class="text-center mb-6">
-                            <img src="images/Frame 170.png" alt="mySheepi" class="h-8 mx-auto mb-4">
-                            <img src="images/image 2.png" alt="mySheepi Kissen"
-                                class="w-full rounded-lg mb-4 hover:scale-105 transition-transform duration-500">
-                            <div class="flex justify-center items-center gap-2 mb-2">
-                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs font-bold">-15%
-                                    RABATT</span>
-                                <span class="text-gray-400 text-sm line-through old-price-display">159€</span>
-                                <span class="text-2xl font-bold text-primary price-display">135€</span>
+                            <img src="images/mysheepi-logo-green.png" alt="mySheepi" class="h-10 mx-auto mb-4">
+                            <img src="images/image 2.png" alt="mySheepi Kissen" class="w-full rounded-lg mb-4">
+                            <div class="mt-4 mb-4">
+                                <img src="images/Screenshot 2025-05-05 at 17.21.31 1.png" alt="Trustpilot" class="h-12 mx-auto opacity-80">
                             </div>
                         </div>
 
-                        <!-- Size Selector Sidebar -->
+                        <!-- Variant Selector -->
                         <div class="mb-6">
-                            <p class="text-sm font-semibold text-gray-700 mb-2">Größe wählen:</p>
+                            <div class="mb-4">
+                                <img src="images/HOME pillow 60x40_front beige bg 1.png" alt="mySheepi HOME Kissen" class="w-full rounded-lg mb-3">
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 mb-3">Größe wählen:</p>
                             <div class="grid grid-cols-2 gap-2 variant-selector-group">
-                                <button
-                                    class="variant-btn-sidebar p-2 border-2 border-primary bg-primary/10 text-primary rounded-md text-sm font-medium transition-colors text-center"
-                                    data-variant-id="45312544440584" data-price="135" data-old-price="159">
-                                    Kompakt
-                                    <span class="block text-xs font-normal">60x40 cm</span>
+                                <button class="variant-btn-sidebar p-3 border-2 border-mysheepi-green bg-mysheepi-green/10 text-mysheepi-green rounded-lg text-center transition-all relative" data-variant-id="45312544440584" data-price="135" data-old-price="159">
+                                    <div class="font-semibold text-sm mb-1">Kompakt</div>
+                                    <div class="text-xs font-normal mb-2">60x40 cm</div>
+                                    <div class="pt-2 border-t border-mysheepi-green/30">
+                                        <div class="text-xs text-gray-500 line-through old-price-display">159€</div>
+                                        <div class="text-lg font-bold price-display">135€</div>
+                                    </div>
                                 </button>
-                                <button
-                                    class="variant-btn-sidebar p-2 border-2 border-gray-200 text-gray-600 rounded-md text-sm font-medium transition-colors hover:border-gray-300 text-center"
-                                    data-variant-id="45312544473352" data-price="152" data-old-price="179">
-                                    Standard
-                                    <span class="block text-xs font-normal">80x40 cm</span>
+                                <button class="variant-btn-sidebar p-3 border-2 border-gray-200 text-gray-600 rounded-lg text-center transition-all hover:border-gray-300 relative" data-variant-id="45312544473352" data-price="152" data-old-price="179">
+                                    <div class="font-semibold text-sm mb-1">Standard</div>
+                                    <div class="text-xs font-normal mb-2">80x40 cm</div>
+                                    <div class="pt-2 border-t border-gray-200">
+                                        <div class="text-xs text-gray-500 line-through old-price-display">179€</div>
+                                        <div class="text-lg font-bold price-display">152€</div>
+                                    </div>
                                 </button>
                             </div>
                         </div>
 
-                        <ul class="check-list text-sm text-gray-600 space-y-2 mb-6">
-                            <li>Von Orthopäden empfohlen</li>
-                            <li>Individuell anpassbar</li>
-                            <li>Waschbar & Hygienisch</li>
-                            <li>Made in Germany</li>
-                            <li>100 Nächte Probeschlafen</li>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-mysheepi-green">✓</span>
+                                <span>Individuell anpassbar</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-mysheepi-green">✓</span>
+                                <span>Integrierte Nackenrolle</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-mysheepi-green">✓</span>
+                                <span>100 Tage risikofrei testen</span>
+                            </li>
                         </ul>
 
-                        <a href="https://www.mysheepi.com/cart/45312544440584:1"
-                            class="cta-link block w-full bg-primary hover:bg-primary-dark text-white text-center font-bold py-4 rounded-lg shadow-md transition-all duration-200 uppercase tracking-wide">
-                            JETZT BESTELLEN
+                        <a href="https://www.mysheepi.com/cart/45312544440584:1" class="cta-link block w-full bg-mysheepi-green hover:bg-mysheepi-green-dark text-white text-center font-bold py-4 rounded-lg shadow-md transition-all duration-200 uppercase tracking-wide">
+                            Jetzt bestellen
                         </a>
-
-                        <div class="mt-4 text-center">
-                            <img src="images/Screenshot 2025-05-05 at 17.21.31 1.png" alt="Trustpilot"
-                                class="h-12 mx-auto opacity-80">
-                        </div>
                     </div>
                 </div>
             </aside>
 
         </div>
-    </main>
+    </div>
 
-    <footer class="bg-gray-800 text-gray-400 py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+    <!-- Footer -->
+    <footer class="bg-mysheepi-green text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
             <p>&copy; 2025 mySheepi. Alle Rechte vorbehalten.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white">Impressum</a>
-                <a href="#" class="hover:text-white">Datenschutz</a>
-                <a href="#" class="hover:text-white">AGB</a>
-            </div>
         </div>
     </footer>
 
-    <!-- Logic for Variants -->
+    <!-- Variant Selection Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const checkoutLinks = document.querySelectorAll('.cta-link');
             const priceDisplays = document.querySelectorAll('.price-display');
             const oldPriceDisplays = document.querySelectorAll('.old-price-display');
 
-            // Function to update state
             function updateVariant(variantId, price, oldPrice) {
                 // Update Checkout Links
                 const newUrl = `https://www.mysheepi.com/cart/${variantId}:1`;
@@ -309,26 +498,34 @@
                 priceDisplays.forEach(el => el.textContent = `${price}€`);
                 oldPriceDisplays.forEach(el => el.textContent = `${oldPrice}€`);
 
-                // Update Button Styles (Sidebar)
+                // Update Sidebar Button Styles
                 document.querySelectorAll('.variant-btn-sidebar').forEach(btn => {
+                    const priceDiv = btn.querySelector('.pt-2');
                     if (btn.dataset.variantId === variantId) {
-                        btn.classList.add('border-primary', 'bg-primary/10', 'text-primary');
+                        btn.classList.add('border-mysheepi-green', 'bg-mysheepi-green/10', 'text-mysheepi-green');
                         btn.classList.remove('border-gray-200', 'text-gray-600');
+                        if (priceDiv) {
+                            priceDiv.classList.remove('border-gray-200');
+                            priceDiv.classList.add('border-mysheepi-green/30');
+                        }
                     } else {
-                        btn.classList.remove('border-primary', 'bg-primary/10', 'text-primary');
+                        btn.classList.remove('border-mysheepi-green', 'bg-mysheepi-green/10', 'text-mysheepi-green');
                         btn.classList.add('border-gray-200', 'text-gray-600');
+                        if (priceDiv) {
+                            priceDiv.classList.remove('border-mysheepi-green/30');
+                            priceDiv.classList.add('border-gray-200');
+                        }
                     }
                 });
 
-                // Update Button Styles (Bottom CTA)
+                // Update Main CTA Button Styles
                 document.querySelectorAll('.variant-btn').forEach(btn => {
-                    // Logic for bottom big buttons: Active gets white bg/primary text, Inactive gets dark bg/white text
                     if (btn.dataset.variantId === variantId) {
-                        btn.classList.remove('bg-gray-800', 'text-white', 'border-gray-600');
-                        btn.classList.add('bg-white', 'text-primary', 'border-white', 'scale-105');
+                        btn.classList.add('border-mysheepi-green', 'bg-mysheepi-green', 'text-white');
+                        btn.classList.remove('border-gray-300', 'bg-white', 'text-gray-700');
                     } else {
-                        btn.classList.add('bg-gray-800', 'text-white', 'border-gray-600');
-                        btn.classList.remove('bg-white', 'text-primary', 'border-white', 'scale-105');
+                        btn.classList.remove('border-mysheepi-green', 'bg-mysheepi-green', 'text-white');
+                        btn.classList.add('border-gray-300', 'bg-white', 'text-gray-700');
                     }
                 });
             }
@@ -344,6 +541,6 @@
             });
         });
     </script>
-</body>
 
+</body>
 </html>
