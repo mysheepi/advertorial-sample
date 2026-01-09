@@ -562,6 +562,26 @@
                 });
             }
 
+            // Initialize all buttons to show their own prices
+            document.querySelectorAll('.variant-btn-sidebar, .variant-btn').forEach(btn => {
+                const btnPriceDisplay = btn.querySelector('.price-display');
+                const btnOldPriceDisplay = btn.querySelector('.old-price-display');
+                
+                if (btnPriceDisplay && btn.dataset.price) {
+                    btnPriceDisplay.textContent = `${btn.dataset.price}€`;
+                }
+                if (btnOldPriceDisplay && btn.dataset.oldPrice) {
+                    btnOldPriceDisplay.textContent = `${btn.dataset.oldPrice}€`;
+                }
+            });
+
+            // Initialize with the first selected variant (Kompakt)
+            const defaultVariant = document.querySelector('.variant-btn-sidebar[data-variant-id="45312544440584"]');
+            if (defaultVariant) {
+                const { variantId, price, oldPrice } = defaultVariant.dataset;
+                updateVariant(variantId, price, oldPrice);
+            }
+
             // Attach listeners to all variant buttons
             const allButtons = document.querySelectorAll('.variant-btn, .variant-btn-sidebar');
             allButtons.forEach(btn => {
