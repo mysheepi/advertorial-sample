@@ -494,13 +494,34 @@
                 const newUrl = `https://www.mysheepi.com/cart/${variantId}:1`;
                 checkoutLinks.forEach(link => link.href = newUrl);
 
-                // Update Prices
-                priceDisplays.forEach(el => el.textContent = `${price}€`);
-                oldPriceDisplays.forEach(el => el.textContent = `${oldPrice}€`);
+                // Update Prices (but exclude prices inside variant buttons - they should keep their own prices)
+                priceDisplays.forEach(el => {
+                    // Skip if this price display is inside a variant button
+                    if (!el.closest('.variant-btn-sidebar') && !el.closest('.variant-btn')) {
+                        el.textContent = `${price}€`;
+                    }
+                });
+                oldPriceDisplays.forEach(el => {
+                    // Skip if this old price display is inside a variant button
+                    if (!el.closest('.variant-btn-sidebar') && !el.closest('.variant-btn')) {
+                        el.textContent = `${oldPrice}€`;
+                    }
+                });
 
-                // Update Sidebar Button Styles
+                // Update Sidebar Button Styles and ensure each button shows its own price
                 document.querySelectorAll('.variant-btn-sidebar').forEach(btn => {
                     const priceDiv = btn.querySelector('.pt-2');
+                    const btnPriceDisplay = btn.querySelector('.price-display');
+                    const btnOldPriceDisplay = btn.querySelector('.old-price-display');
+                    
+                    // Always set each button to show its own price from data attributes
+                    if (btnPriceDisplay && btn.dataset.price) {
+                        btnPriceDisplay.textContent = `${btn.dataset.price}€`;
+                    }
+                    if (btnOldPriceDisplay && btn.dataset.oldPrice) {
+                        btnOldPriceDisplay.textContent = `${btn.dataset.oldPrice}€`;
+                    }
+                    
                     if (btn.dataset.variantId === variantId) {
                         btn.classList.add('border-mysheepi-green', 'bg-mysheepi-green/10', 'text-mysheepi-green');
                         btn.classList.remove('border-gray-200', 'text-gray-600');
@@ -518,8 +539,19 @@
                     }
                 });
 
-                // Update Main CTA Button Styles
+                // Update Main CTA Button Styles and ensure each button shows its own price
                 document.querySelectorAll('.variant-btn').forEach(btn => {
+                    const btnPriceDisplay = btn.querySelector('.price-display');
+                    const btnOldPriceDisplay = btn.querySelector('.old-price-display');
+                    
+                    // Always set each button to show its own price from data attributes
+                    if (btnPriceDisplay && btn.dataset.price) {
+                        btnPriceDisplay.textContent = `${btn.dataset.price}€`;
+                    }
+                    if (btnOldPriceDisplay && btn.dataset.oldPrice) {
+                        btnOldPriceDisplay.textContent = `${btn.dataset.oldPrice}€`;
+                    }
+                    
                     if (btn.dataset.variantId === variantId) {
                         btn.classList.add('border-mysheepi-green', 'bg-mysheepi-green', 'text-white');
                         btn.classList.remove('border-gray-300', 'bg-white', 'text-gray-700');
